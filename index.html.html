@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FullStack-Developer</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Portfolio">
+        <meta name="keywords" content="Software Developer, Frontend,Backend,FullStack,Web,Mobile,Microservices,APIs">
+        <meta name="author" content="Gabriel Rogath">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='icon' href='Devops3.png' type='image/x-icon' > 
+    </head>
+
+    <style>
+         body{
+
+background-color: slategrey;
+background-image: url("freeback.png");
+
+text-emphasis-color: red;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Column container */
+.row { 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Main column */
+.main { 
+  flex: 70%; /* Set the width of the main content */
+ /*   background-color: white;   White background color */
+  padding: 20px; /* Some padding */
+}
+
+#thumbnail {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    
+  }
+  .fullCard {
+    flex: 70%;
+       /* width: 800px; Some width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+    padding: 20px;
+    margin: 10px 5px;
+    margin:auto;
+   
+   
+  }
+
+  .cardContent {
+    padding: 10px;
+  }
+  .cardText {
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    text-align: center;
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 27px;
+    font-weight: 800;
+
+    opacity:0.7;
+
+   
+    
+  }
+
+  .container{
+
+display: grid;
+ grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+  margin-bottom: 10px;
+
+ 
+  height: auto;
+
+  
+}
+
+
+
+.box > img {
+  width: 80%;
+}
+
+
+.box {
+padding: 20px;
+margin: 20px;
+}
+
+
+#lastRowThumbnail {
+    /*
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    */
+    
+  }
+  .lastrow {
+    flex: 70%;
+       /* width: 800px; Some width 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    */
+    
+    padding: 20px;
+    margin: 10px 5px;
+   
+    margin:auto;
+
+    text-align: center;
+
+  }
+
+  .lastRowCardContent {
+    padding: 10px;
+   
+  }
+  .lastRowCardText {
+    margin-bottom: 30px;
+  }
+
+  #lasth{
+
+text-align: center;
+padding: 10px;
+font-size: 27px;
+font-weight: 800;
+opacity:0.7;
+/*
+background-color: rgba(45, 45, 45, 0.1);
+
+*/
+}
+
+
+
+  .experience{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+            
+    width: 70%;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+    margin: auto;
+
+    }
+
+
+    /* Footer */
+.footer {
+   background-color: #333;
+   color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+        .econtact{
+          padding: 0%;
+          margin: 0%;
+          
+        }
+        .econtact:link {/* nothing works with email */ }
+        .econtact :visited {color:#00FF00;}
+        .econtact:hover {color:#FF00FF;} 
+        .econtact:active {color:#0000FF;}
+
+        .lcontact{
+          padding: 0%;
+          margin: 0%;
+         }
+        .lcontact :visited {color:#00FF00;}
+        .lcontact:hover {color:#FF00FF;} 
+        .lcontact:active {color:#0000FF;}
+
+
+        .tcontact{
+          padding: 0%;
+          margin: 0%;
+        }
+        .tcontact :visited {color:#00FF00;}
+        .tcontact:hover {color:#FF00FF;} 
+        .tcontact:active {color:#0000FF;}
+
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  :root {
+    --penguin-size: 150px;
+    --penguin-skin: gray;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+/*
+  @media (max-width: 350px) {
+    :root {
+     
+    }
+  }
+*/
+  .penguin {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    
+    width: var(--penguin-size, 300px);
+    height: var(--penguin-size, 300px);
+  }
+
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, gray);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+
+  .right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      }
+      40% {
+        transform: rotate(130deg);
+      }
+    }
+
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .sparkle {
+    top: 25%;
+    left:-23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  body {
+    /*
+    background:#c6faf1;
+    */
+   
+    background-image: url("freeback.png");
+    
+  }
+
+  .penguin * {
+    position: absolute;
+  }
+
+
+
+    </style>
+
+    <body>
+
+        <div class="row">
+
+            <div class="main">
+                <div class="fullCard" id="thumbnail">
+
+                    <div class="cardContent">
+                        <div class="cardText">
+                            <h4 class="firstHead">FullStack Developer</h4>
+        
+        
+                            <div class="penguin">
+                                <div class="penguin-bottom">
+                                  <div class="right-hand"></div>
+                                  <div class="left-hand"></div>
+                                  <div class="right-feet"></div>
+                                  <div class="left-feet"></div>
+                                </div>
+                                <div class="penguin-top">
+                                  <div class="right-cheek"></div>
+                                  <div class="left-cheek"></div>
+                                  <div class="belly"></div>
+                                  <div class="right-eye">
+                                    <div class="sparkle"></div>
+                                  </div>
+                                  <div class="left-eye">
+                                    <div class="sparkle"></div>
+                                  </div>
+                                  <div class="blush-right"></div>
+                                  <div class="blush-left"></div>
+                                  <div class="beak-top"></div>
+                                  <div class="beak-bottom"></div>
+                                </div>
+                              </div>
+        
+        
+        
+                            <hr>
+                            <p style="text-align: center;"><em><strong class="jina" >****** Gabriel Rogath Assenga****** </strong></em></p>
+                            <p class="stack" style="text-align: center;"><em>Hi,
+                              I am Software Developer in web and mobile Applications based in  Dar es Salaam, Tanzania. 
+                              This is a brief portfolio which explains my skills. For now I work as a freelancer,
+                              but also in some case the agreement of the work can change depending on the nature of the project with the customer or the employer. 
+                              I am very pleased that you are here, You can go through his portfolio, 
+                              and do not hesitate to contact me.I am eagerly expecting to work with you. </em></p>
+                            <p style="text-align: center;" class="mawasiliano"> <b> Email:</b> <a href="mailto:gassenga080@gmail.com">gassenga080@gmail.com</a>  &nbsp; &nbsp; <b> Linkedin: </b> <a href="https://www.linkedin.com/in/gabriel-rogath-080/"> linkedin.com/in/gabriel-rogath-080 </a> &nbsp; &nbsp; <b>Twitter :</b>  <a href="https://twitter.com/GabrielRogath">@GabrielRogath</a></p>
+                            <!--p class="twitter"> <b>Twitter :</b>  <a href="https://twitter.com/GabrielRogath">@GabrielRogath</a> </p-->
+                        </div>
+        
+                        <div class="cardLinks">
+        
+        
+                        </div>
+                    </div>
+                </div>
+        
+
+
+
+
+
+
+                
+                    <div class="zone container">
+                        
+                        <div class="box zone item1" > 
+                            <h4>Microservices</h4>
+                            <p><em>I have skills in Deploying Microservices with Eureka in Spring Framework. 
+                                Knowledge in working with Platform-as-a-service (PaaS) mostly I use Heroku, Git & GitHub.</em>
+                            </p>
+                        </div>
+
+                        <div class="box zone item2" >
+                            <h4>Web Development </h4>
+                            <p> <em>In Web Development I mostly use Spring and laravel as Backends Frameworks together with Vue.js and Angular for Frontends.
+                                 Just like many Developers HTML5 & CSS and JavaSript were my first and basic skills that I learned at the begining of my carrier.
+                                </em>
+                            </p>
+                        </div>
+
+                        <div class="box zone item3" >
+                            <h4>Android Development </h4>
+                            <p><em>On mobile apps I am based on Android application Development,
+                                 It is fairly to say that Android Studio IDE is my best tool that I only use to make android apps. 
+                                </em>
+                            </p>
+                        </div>
+
+                        <div class="box zone item4" >
+                            <h4> Programming Languages:</h4>
+                            <p><em>
+                                Java is one of my best programming language since it was the first language that I learned at College,
+                                 I use it in developing mobile Apps, Web Apps, APIs and Microservices.
+                                PHP is also a best language, I use it for scripting to communicate with servers and Web Development. 
+                                I also use JavaScript for both Backend and Frontend.
+                            </em>
+                            </p>
+                        </div>
+
+                        <div class="box zone item5" >
+                            <h4>Databases</h4>
+                            <p><em>
+                                SQL is a fundamental for any Backend Developer while working with Servers.
+                                 Most of my practice are with MySQL server(MariaDB).
+                                Non-SQL database are sometimes good for practical and add knowledge,I like Firebase.
+                            </em>
+                            </p>
+                        </div>
+
+                        <div class="box zone item6" >
+                            <h4>Additional Knowledge in 2021</h4>
+                            <p><em>Due to the fact that Technology is highly evolving, this year will be a continuation of deep learning on the skills I have , 
+                              and adding more new technologies so as to become more competent as a Senior Developer.
+                            </em>
+                            </p>
+                        </div>
+                      
+
+
+                    </div>
+                  
+           
+                    
+            
+
+
+
+
+
+
+               
+                <div class="lastrow" id="lastRowThumbnail">
+
+                    <div class="lastRowCardContent">
+                        <div class="lastRowCardText">
+                            <h3 id="lasth"><u>Hands On Technologies</u></h3>
+
+
+
+                            <div class="experience">
+          
+
+                                <div class=""> <a href="https://www.java.com/en/">  <img src="java.png" alt="Java" width="150px" height="150px"></a> </div>
+                                <div class=""> <a href="https://www.php.net/">  <img src="php.png" alt="PHP"  width="150px" height="150px"></a></div>
+                                <div class=""> <a href="https://www.javascript.com/">  <img src="js.png" alt="javaScript"  width="150px" height="150px"> </a></div>
+                                <div class=""> <a href="https://html.com/">  <img src="html.png" alt="HTML"  width="150px" height="150px"></a> </div>
+                                <div class=""><a href="https://www.w3.org/Style/CSS20/history.html">   <img src="css.png" alt="CSS"  width="150px" height="150px"> </a></div>
+                                <div class=""> <a href="https://spring.io/">  <img src="spring.png" alt="Spring"  width="150px" height="150px"> </a></div>
+                                <div class=""> <a href="https://github.com/Netflix/eureka">  <img src="eureka.jpg" alt="Eureka"  width="150px" height="150px"> </a></div>
+                                <div class=""> <a href="https://github.com/">  <img src="git.png" alt="GIt & Github"  width="150px" height="150px"> </a> </div>
+                                <div class=""> <a href="https://www.heroku.com/">  <img src="heroku.png" alt="Heroku"  width="150px" height="150px"> </a></div>
+                                <div class=""> <a href="https://laravel.com/">  <img src="laravel.jpg" alt="Laravel"  width="150px" height="150px"> </a></div>
+                                <div class=""><a href="https://firebase.google.com/">   <img src="firebase.png" alt="Firebase"  width="150px" height="150px"></a> </div>
+                                <div class=""> <a href="https://www.mysql.com/">  <img src="mysql.png" alt="Mysql"  width="150px" height="150px"></a> </div>
+                                <div class=""> <a href="https://www.postgresql.org/">  <img src="postgresql.png" alt="Postgresql"  width="150px" height="150px"></a> </div>
+                               
+                    
+                            </div>
+                    
+
+
+
+                        </div>
+                    </div>
+
+               </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer">
+            <p class="econtact">Email: <a href="mailto:gassenga080@gmail.com" style="color: #00FF00;">gassenga080@gmail.com</a> </p>
+            <p class="lcontact">LinkedIn: <a href="https://www.linkedin.com/in/gabriel-rogath-080/"> linkedin.com/in/gabriel-rogath-080 </a></p>
+            <p class="tcontact">Twitter: <a href="https://twitter.com/GabrielRogath">@GabrielRogath</a></p>
+            <p>Copyright © 2021 Gabriel Rogath   |   ALL RIGHTS RESERVED </p>
+            
+          </div>
+    </body>
+</html>
